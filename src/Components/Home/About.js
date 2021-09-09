@@ -3,8 +3,8 @@ import media from "styled-media-query";
 import Highlight from '../Main/Highlight';
 
 import odie from '../../imgs/odie.jpeg';
-import me2 from '../../imgs/me2.jpeg';
-import food from '../../imgs/food.jpeg';
+// import me2 from '../../imgs/me2.jpeg';
+// import food from '../../imgs/food.jpeg';
 import flowers from '../../imgs/flowers.jpeg';
 
 
