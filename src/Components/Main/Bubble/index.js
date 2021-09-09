@@ -18,14 +18,14 @@ function Bubble(props) {
   }
 
   if(props.number <= 4) {
-    animation = "sway-left-to-right";
+    animation = "move2";
     color = "orange";
-  } else if(props.number > 4 && props.number <= 8) {
+  } else if(props.number > 4 && props.number <= 9) {
     color = "pink"
     animation = "move1";
   } else {
     color = "green"
-    animation = "sway-right-to-left";
+    animation = "move3";
   }
 
   const BubbleElement = styled.div`

@@ -51,13 +51,16 @@ p {
 
 @keyframes move1{
   0% {margin-left: -400px;}
-  100% {margin-left: 200px;}
+  50% {margin-left: 200px;}
+  100% {margin-left: -400px;}
 }
 @keyframes move2{
   0% {margin-left: 440px; margin-top: 0px;}
-  100% {margin-left: -1000px; margin-top: -100px}
+  50% {margin-left: -1000px; margin-top: -100px}
+  100% {margin-left: 440px; margin-top: 0px;}
 }
 @keyframes move3{
   0% {margin-left: 1400px;}
-  100% {margin-left: -1000px;}
+  50% {margin-left: -1000px;}
+  100% {margin-left: 1400px;}
 }
