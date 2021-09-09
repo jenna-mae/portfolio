@@ -34,6 +34,12 @@ const Images = styled.div`
     justify-content: space-between;
     ${media.greaterThan("medium")`
         width: 44%;
+        flex-direction: column;
+        align-content: flex-end;
+    `}
+    ${media.greaterThan("medium")`
+        flex-direction: row;
+        align-content: flex-start;
     `}
 `;
 
@@ -45,16 +51,24 @@ const Image = styled.div`
     background-color: white;
     padding: 10px;
     margin-top: 40px;
+    height: 300px;
 
     ${media.greaterThan("medium")`
-        width: 48%;
+        width: 90%;
         margin-top: 0px;
-        margin-bottom: 10px;
+        margin-bottom: 30px;
+        &:nth-child(2) {
+            margin-bottom: 0px;
+        }
+    `}
+    ${media.greaterThan("medium")`
+        width: 48%;
     `}
 `;
 
 const AboutImage = styled.img`
     max-width: 100%;
+    min-width: 100%;
     border-radius: 14px;
     box-shadow: 0px 4px 8px rgb(134 151 168 / 10%);
     height: 100%;
@@ -115,7 +129,7 @@ function About() {
                 <InnerWrapper>
                     <TextWrapper>
                         <AboutContainer>
-                            <AboutText>I'm a recent graduate from the Web Development and Interactive Design program at the Vancouver Institutue of Media Arts (VanArts). The program taught me the ins an outs of the web development life cycle from start to finish. Although I enjoyed learning about the UX/UI design process; what I really fell in love with was coding. I developed a strong passion for building complex products and solving problems through code. I'm eager and excited to join a team of passionate programmers and grow in this industry.</AboutText>
+                            <AboutText>I'm a recent graduate from the Web Development and Interactive Design program at the Vancouver Institutue of Media Arts (VanArts). The program taught me the ins an outs of the web development life cycle from start to finish. Although I enjoyed learning about the UX/UI design process, what I really fell in love with was coding. I developed a strong passion for building complex products and solving problems through code. I'm eager and excited to join a team of passionate programmers and grow in this industry.</AboutText>
                         </AboutContainer>
                         <AboutContainer>
                             <AboutText>Things that are important to me (in no specific order):</AboutText>
@@ -133,12 +147,12 @@ function About() {
                         <Image>
                             <AboutImage src={odie} alt="dog" />
                         </Image>
-                        <Image>
+                        {/* <Image>
                             <AboutImage src={me2} alt="dog" />
                         </Image>
                         <Image>
                             <AboutImage src={food} alt="dog" />
-                        </Image>
+                        </Image> */}
                         <Image>
                             <AboutImage src={flowers} alt="dog" />
                         </Image>
