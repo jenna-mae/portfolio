@@ -123,61 +123,79 @@ function Header() {
       top: "340px",
       left: "300px",
       size: "1",
+      speed: "44",
     },
     {
       top: "480px",
       left: "1000px",
-      size: "1",
+      size: "2",
+      speed: "39",
     },
     {
       top: "40px",
       left: "40px",
-      size: "1",
+      size: "3",
+      speed: "42",
     },
     {
       top: "80px",
       left: "420px",
       size: "1",
+      speed: "43",
     },
     {
       top: "500px",
       left: "200px",
       size: "2",
+      speed: "45",
     },
     {
       top: "20px",
       left: "620px",
-      size: "2",
+      size: "3",
+      speed: "36",
+    },
+    {
+      top: "300px",
+      left: "90px",
+      size: "1",
+      speed: "48",
     },
     {
       top: "10px",
       left: "940px",
-      size: "2",
+      size: "1",
+      speed: "48",
     },
     {
       top: "600px",
       left: "60px",
       size: "2",
+      speed: "42",
     },
     {
       top: "400px",
       left: "720px",
       size: "3",
+      speed: "39",
     },
     {
       top: "340px",
       left: "40px",
-      size: "3",
+      size: "1",
+      speed: "42",
     },
     {
       top: "280px",
       left: "800px",
-      size: "3",
+      size: "2",
+      speed: "44",
     },
     {
       top: "460px",
       left: "500px",
       size: "3",
+      speed: "35",
     }
   ]
 
@@ -187,7 +205,7 @@ function Header() {
         <Navigation />
         <Bubbles>
           {bubbles.map((bubble, index) => (
-            <Bubble key={index} number={index} top={bubble.top} left={bubble.left} size={bubble.size} />
+            <Bubble key={index} number={index} top={bubble.top} left={bubble.left} size={bubble.size} speed={bubble.speed} />
           ))}
         </Bubbles>
         <Texture>
