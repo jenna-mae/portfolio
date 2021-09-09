@@ -19,13 +19,10 @@ function Bubble(props) {
 
   if(props.number <= 4) {
     animation = "move2";
-    color = "orange";
-  } else if(props.number > 4 && props.number <= 8) {
-    color = "pink"
+  } else if(props.number > 4 && props.number <= 9) {
     animation = "move1";
   } else {
-    color = "green"
-    animation = "move2";
+    animation = "move3";
   }
 
   const BubbleElement = styled.div`
@@ -33,13 +30,14 @@ function Bubble(props) {
     height: ${size};
     z-index: ${zIndex};
     border-radius: 200px;
-    box-shadow: 0px 4px 10px rgb(134 151 168 / 30%);
+    box-shadow: 0px 4px 10px rgb(134 151 168 / 22%);
     background-color: #F7F7F7;
-    // background-color: ${color};
+    opacity: 70%;
     position: absolute;
     top: ${props.top};
     left: ${props.left};
-    animation: ${animation} 34s linear infinite;
+    animation: ${animation} ${props.speed}s linear infinite;
+
   }
   `;
     return ( <BubbleElement /> );
