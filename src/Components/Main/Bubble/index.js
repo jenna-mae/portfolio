@@ -19,12 +19,9 @@ function Bubble(props) {
 
   if(props.number <= 4) {
     animation = "move2";
-    color = "orange";
   } else if(props.number > 4 && props.number <= 9) {
-    color = "pink"
     animation = "move1";
   } else {
-    color = "green"
     animation = "move3";
   }
 
@@ -36,7 +33,6 @@ function Bubble(props) {
     box-shadow: 0px 4px 10px rgb(134 151 168 / 22%);
     background-color: #F7F7F7;
     opacity: 70%;
-    // background-color: ${color};
     position: absolute;
     top: ${props.top};
     left: ${props.left};
