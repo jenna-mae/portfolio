@@ -65,8 +65,8 @@ const NavLi = styled.li`
         justify-content: center;
         align-items: center;
         ${media.greaterThan("large")`
-            width: 58px;
-            height: 58px;
+            width: 62px;
+            height: 62px;
         `}
         p {
             font-size: 11px;
@@ -142,7 +142,7 @@ const NavItemsLrg = styled.div`
         display: block;
         height: 100%;
         margin-left: auto;
-        padding: 30px 0px;
+        padding: 40px 0px;
     `}
 `;
 
