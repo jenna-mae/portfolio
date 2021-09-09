@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 function Bubble(props) {
   let animation
-  let color
   let size
   let zIndex
 
