@@ -40,19 +40,21 @@ const LogoSm = styled(Link)`
 
 const NavLi = styled.li`
     margin-bottom: 28px;
-    
+    ${media.greaterThan("large")`
+        margin-bottom: 30px;
+    `}
     &:last-child {
         margin-bottom: 0px;
     }
-
     a {
+        transition: background-color .3s ease;
         position: relative;
         color: black;
         text-decoration: none;
-        width: 76px;
+        width: 72px;
+        height: 72px;
         margin: 0 auto;
         display: block;
-        height: 76px;
         font-size: 14px;
         background-color: white;
         border-radius: 14px;
@@ -62,38 +64,45 @@ const NavLi = styled.li`
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        ${media.greaterThan("large")`
+            width: 58px;
+            height: 58px;
+        `}
         p {
-            font-size: 12px;
-            font-weight: 500;
+            font-size: 11px;
+            font-weight: 400;
+            padding-top: 2px;
             ${media.greaterThan("large")`
-                display: none;
-                font-size: 13px;
+                opacity: 0%;
+                font-size: 12px;
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                font-weight: 800;
+                font-weight: 700;
                 transform: translate(-50%,-50%);
+                padding-top: 0px;
             `}
         }
         &:hover {
             box-shadow: 4px 8px 9px rgb(134 151 168 / 20%);
-        }
-        &:hover p {
-            color: white;
-            ${media.greaterThan("large")`
-                display: inline-block;
-            `}
         }
         &:hover svg {
             ${media.greaterThan("large")`
                 display: none;
             `}
         }
+        &:hover p {
+            color: white;
+            ${media.greaterThan("large")`
+                transition: opacity .4s ease-in;
+                opacity: 100%;
+            `}
+        }
     }
 `;
 
 const NavUl = styled.ul`
-    padding-top: 40px;
+    padding-top: 26px;
     list-style: none;
     ${media.greaterThan("large")`
         padding-top: 0px;
@@ -105,7 +114,7 @@ const NavItems = styled.div`
     right: 0px;
     top: 0px;
     background-color: white;
-    border-radius: 14px;
+    border-radius: 14px 0px 0px 14px;
     box-shadow: 0px 4px 8px rgb(134 151 168 / 10%);
     border: 1px solid #eee;
     width: 150px;
@@ -114,10 +123,7 @@ const NavItems = styled.div`
     text-align: center;
 
     ${media.greaterThan("medium")`
-        width: 170px;
-    `}
-    ${media.greaterThan("large")`
-        width: 30%;
+        width: 150px;
     `}
 `;
 
@@ -136,6 +142,7 @@ const NavItemsLrg = styled.div`
         display: block;
         height: 100%;
         margin-left: auto;
+        padding: 30px 0px;
     `}
 `;
 
@@ -145,15 +152,14 @@ const NavContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    padding: 20px;
+    padding: 10px 20px;
     width: 100%;
-    // background-color: #d7ecd9c4;
     z-index: 50;
     ${media.greaterThan("large")`
         align-items: start;
         padding-right: 0px;
         display: block;
-        width: 10%;
+        width: 9%;
         right: 0px;
         top: 50%;
         transform: translate(0%,-50%);
@@ -176,7 +182,7 @@ const StyledMenu = styled(Menu5)`
 
 const HomeIcon = styled(Home)`
     margin: 2px 0px 3px;
-    height: 24px;
+    height: 22px;
     ${media.greaterThan("large")`
         margin: 0px;
         position: absolute;
@@ -188,7 +194,7 @@ const HomeIcon = styled(Home)`
 
 const CodeIcon = styled(Code)`
     margin: 2px 0px 3px;
-    height: 24px;
+    height: 22px;
     ${media.greaterThan("large")`
         margin: 0px;
         position: absolute;
@@ -199,7 +205,7 @@ const CodeIcon = styled(Code)`
 `;
 const WorkIcon = styled(Briefcase)`
     margin: 2px 0px 3px;
-    height: 24px;
+    height: 22px;
     ${media.greaterThan("large")`
         margin: 0px;
         position: absolute;
@@ -211,7 +217,7 @@ const WorkIcon = styled(Briefcase)`
 
 const PersonIcon = styled(Person)`
     margin: 2px 0px 3px;
-    height: 24px;
+    height: 21px;
     ${media.greaterThan("large")`
         margin: 0px;
         position: absolute;
@@ -223,7 +229,7 @@ const PersonIcon = styled(Person)`
 
 const PhoneIcon = styled(Phone)`
     margin: 2px 0px 3px;
-    height: 24px;
+    height: 21px;
     ${media.greaterThan("large")`
         margin: 0px;
         position: absolute;
@@ -236,6 +242,7 @@ const ArrowIcon = styled(KeyboardArrowRight)`
     margin: 2px 0px 3px;
     height: 24px;
     ${media.greaterThan("large")`
+        height: 22px;
         margin: 0px;
         position: absolute;
         top: 50%;
@@ -274,7 +281,7 @@ function Navigation(props) {
             <NavUl>
                 <NavLi>
                     <Link
-                        activeClass="activePurple"
+                        activeClass="activePink"
                         to="Header"
                         spy={true}
                         smooth={true}
@@ -288,17 +295,17 @@ function Navigation(props) {
                         to="Skills"
                         spy={true}
                         smooth={true}
-                        offset={-320}
+                        offset={-250}
                         durarion={500}
                         ><CodeIcon /><p>Toolkit</p></Link>
                 </NavLi>
                 <NavLi>
                     <Link
-                        activeClass="activePink"
+                        activeClass="activePurple"
                         to="Projects"
                         spy={true}
                         smooth={true}
-                        offset={-450}
+                        offset={-250}
                         durarion={500}
                     ><WorkIcon /><p>Projects</p></Link>
                 </NavLi>
@@ -308,7 +315,7 @@ function Navigation(props) {
                         to="About"
                         spy={true}
                         smooth={true}
-                        offset={-580}
+                        offset={-250}
                         durarion={500}
                     ><PersonIcon /><p>About</p></Link>
                 </NavLi>
@@ -318,7 +325,7 @@ function Navigation(props) {
                         to="Contact"
                         spy={true}
                         smooth={true}
-                        offset={-540}
+                        offset={-350}
                         durarion={400}
                     ><PhoneIcon /><p>Contact</p></Link>
                 </NavLi>
@@ -359,7 +366,7 @@ function Navigation(props) {
                             to="Skills"
                             spy={true}
                             smooth={true}
-                            offset={-260}
+                            offset={-250}
                             durarion={500}
                             onClick={() => setShowMenu(!showMenu)}
                             ><CodeIcon /><p>Toolkit</p></Link>
@@ -370,7 +377,7 @@ function Navigation(props) {
                             to="Projects"
                             spy={true}
                             smooth={true}
-                            offset={-260}
+                            offset={-250}
                             durarion={500}
                             onClick={() => setShowMenu(!showMenu)}
                         ><WorkIcon /><p>Projects</p></Link>
@@ -381,7 +388,7 @@ function Navigation(props) {
                             to="About"
                             spy={true}
                             smooth={true}
-                            offset={-260}
+                            offset={-250}
                             durarion={500}
                             onClick={() => setShowMenu(!showMenu)}
                         ><PersonIcon /><p>About</p></Link>
@@ -392,7 +399,7 @@ function Navigation(props) {
                             to="Contact"
                             spy={true}
                             smooth={true}
-                            offset={-360}
+                            offset={-350}
                             durarion={500}
                             onClick={() => setShowMenu(!showMenu)}
                         ><PhoneIcon /><p>Contact</p></Link>
@@ -419,33 +426,5 @@ function Navigation(props) {
         </div>
     );
   }
-
-//   if(window.location.pathname ===  "/sweeteats" || window.location.pathname ===  "/lhmedia") {
-//     menu =
-//     <NavItems>
-//         <NavUl>
-//             <NavLi>
-//                 <NavLink to="/">Back Home</NavLink>
-//             </NavLi>
-//             <NavLi>
-//                 <NavLink to="/sweeteats" activeClassName="activePink">sweeteats</NavLink>
-//             </NavLi>
-//             <NavLi>
-//                 <NavLink to="/openspace" activeClassName="activePurple">openspace</NavLink>
-//             </NavLi>
-//             <NavLi>
-//                 <NavLink to="/lhmedia" activeClassName="activePurple">LH Media Productions</NavLink>
-//             </NavLi>
-//             <NavLi>
-//                 <NavLink to="/emerald" activeClassName="activeGreen">Emerald Backyards</NavLink>
-//             </NavLi>
-//             <NavLi>
-//                 <NavLink to="/cms" activeClassName="activeBlue">Custom CMS</NavLink>
-//             </NavLi>
-//             <NavLi>
-//                 <NavLink to="/conecrazy" activeClassName="activePink">Cone Crazy</NavLink>
-//             </NavLi>
-//         </NavUl>
-//     </NavItems>
   
-  export default Navigation;
+export default Navigation;

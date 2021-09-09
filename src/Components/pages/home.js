@@ -11,7 +11,7 @@ import Footer from '../Main/Footer';
 
 const BodyContainer = styled.div`
   ${media.greaterThan("large")`
-    width: 90%;
+    width: 91%;
   `}
 `;
 

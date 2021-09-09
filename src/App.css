@@ -30,12 +30,12 @@ p {
   color: white;
 }
 
-.navigation li a.activePurple, .navigation li:nth-child(1):hover a {
+.navigation li a.activePurple, .navigation li:nth-child(3):hover a {
   background-color: #7683EE;
   color: white;
 }
 
-.navigation li a.activePink, .navigation li:nth-child(3):hover a {
+.navigation li a.activePink, .navigation li:nth-child(1):hover a {
   background-color: #FF4471;
   color: white;
 }
