@@ -24,7 +24,7 @@ function Lhmedia() {
       <div className="App">
         <Navigation next="projects-openspace" />
         <BodyContainer>
-          <Heading image={lhmedia_lrg} title="LH Media Productions" subTitle="Client Site" techs={["php", "JavaScript", "HTML5", "CSS3", "MySQL"]} description="A portfolio site built for a client who works as a videographer and photogtrapher." live="http://jennamae.ca/pm3/" />
+          <Heading image={lhmedia_lrg} title="LH Media Productions" subTitle="Client Site" techs={["php", "JavaScript", "HTML5", "CSS3", "MySQL"]} description="A portfolio site built for a client who works as a videographer and photogtrapher." live="http://jennamae.ca/lhmedia/" />
           <SectionHead name="The Project" />
           <Project
           overview="Liam Herring Media Productions is a prouction company that specializes in promotional videos and documentary camera work. They needed a webstie that explained what services they offer and showcase their past work. The main goal of the site was to generate traffic and expand their customer base. It was important to the client to ensure their range of capabilities was portreyed clearly to the user."
