@@ -101,6 +101,16 @@ const ArrowContainer = styled.div`
   bottom: 20px;
   left: 50%;
   transform: translate(-50%,0%);
+  animation-name: bounce;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+
+  @keyframes bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
 `;
 
 

@@ -13,6 +13,9 @@ const Wrapper = styled.div`
     margin: 0 auto;
     z-index: 10;
     position: relative;
+    ${media.greaterThan("large")`
+        width: 87%;
+    `}
 `;
 
 const AboutContainer = styled.div``;
@@ -77,7 +80,7 @@ const AboutImage = styled.img`
 
 const WhiteContainer = styled.div`
     background-color: white;
-    border-radius: 14px;
+    border-radius: 24px;
     box-shadow: 0px 4px 8px rgb(134 151 168 / 10%);
     border: 1px solid #eee;
     padding: 40px;
