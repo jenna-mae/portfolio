@@ -10,16 +10,16 @@ Run these commands to set up the app:
 
 Clone the repository to your local machine
 
-#### `npm install`
+`npm install`
 
 Install node modules
 
-### `npm start`
+`npm start`
 
 Runs the app in the development mode
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `localhost:3000`
+`localhost:3000`
 
 Run this address in your browser to view app
