@@ -6,11 +6,11 @@ This is my personal portfolio made with React, Styled Components, HTML5, and Jav
 
 Run these commands to set up the app:
 
-### `git clone git@github.com:jenna-mae/portfolio.git`
+`git clone git@github.com:jenna-mae/portfolio.git`
 
 Clone the repository to your local machine
 
-### `npm install`
+#### `npm install`
 
 Install node modules
 
