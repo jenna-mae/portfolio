@@ -17,10 +17,11 @@ const SubTitle = styled.h2`
 const Background = styled.div`
     background-color: white;
     border-radius: 14px;
-    box-shadow: 0px 4px 8px rgb(134 151 168 / 10%);
+    // box-shadow: 0px 14px 28px rgba(134, 151, 168, 0.08);
+    box-shadow: 0px 8px 12px rgb(134 151 168 / 10%);
     border: 1px solid #eee;
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     ${media.greaterThan("medium")`
         margin-bottom: 50px;
     `}
@@ -39,10 +40,10 @@ const ProjectName = styled.h1`
 `;
 
 const ProjectDetails = styled.p`
-    font-size: 14px;
+    font-size: 13px;
     line-height: 21px;
     font-weight: 400;
-    padding: 18px 0px;
+    padding: 10px 0px 18px;
 
     ${media.between("medium", "large")`
         font-size: 12px;
@@ -68,7 +69,7 @@ const MockupFlat = styled.img`
 `;
 
 const ProjectInfo = styled.div`
-    padding: 20px;
+    padding: 24px;
 
     ${media.between("small", "medium")`
         padding: 40px;
@@ -108,6 +109,11 @@ const ViewBtn = styled.a`
     font-size: 13px;
     font-weight: 400;
 
+    &:hover {
+        text-shadow: 0 0 .25px ${props => props.color}, 0 0 .25px ${props => props.color};
+        transition: all .3s linear;
+    }
+
     ${media.greaterThan("large")`
         font-size: 14px;
     `}
@@ -120,6 +126,12 @@ function Project(props) {
         color = '#FF3062';
     } else if(props.color === '2') {
         color = '#6ABB72';
+    } else if(props.color === '3') {
+        color = '#7683EE';
+    } else if(props.color === '4') {
+        color = '#1fa3eb';
+    } else {
+        color = '#FF3062';
     }
 
     const TechSpecs = props.techs

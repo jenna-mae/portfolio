@@ -169,6 +169,7 @@ const NavContainer = styled.div`
 
 const MenuBar = styled.div`
     z-index: 30;
+    transition: all 3s linear;
 `;
 
 const StyledMenu = styled(Menu5)`
@@ -253,6 +254,7 @@ const ArrowIcon = styled(KeyboardArrowRight)`
 
 function Navigation(props) {
     const [showMenu, setShowMenu] = useState(false);
+    // const [opacity, setOpacity] = useState(false);
 
     let menu
     let menuLrg
@@ -263,6 +265,7 @@ function Navigation(props) {
     } else {
         icon = <Close size="30px" zIndex="30" onClick={() => setShowMenu(!showMenu)} />
     }
+
     if(window.location.pathname !==  "/") {
         menuLrg =
         <NavItemsLrg>

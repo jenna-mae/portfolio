@@ -23,6 +23,9 @@ const Wrapper = styled.div`
     margin: 0 auto;
     z-index: 10;
     position: relative;
+    ${media.greaterThan("large")`
+        width: 87%;
+    `}
 `;
 
 const IconContainer = styled.div`
@@ -32,7 +35,7 @@ const IconContainer = styled.div`
     background-color: white;
     box-shadow: 0px 4px 8px rgb(134 151 168 / 10%);
     border: 1px solid #eee;
-    border-radius: 10px;
+    border-radius: 24px;
     padding: 40px 40px 20px 40px;
     ${media.greaterThan("medium")`
         padding: 50px 50px 30px 50px;
