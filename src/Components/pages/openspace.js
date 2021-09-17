@@ -22,7 +22,7 @@ const BodyContainer = styled.div`
 function Openspace() {
     return (
       <div className="App">
-        <Navigation next="projects-emerald" />
+        <Navigation next="projects-cms" />
         <BodyContainer>
           <Heading image={openspace_lrg} title="Openspace" subTitle="Social Networking Service" techs={["php", "JavaScript", "HTML5", "CSS3", "MySQL"]} description="A social networking web application that allows you to video chat with new groups of people." live="http://jennamae.ca/openspace/" github="https://github.com/jenna-mae/openspaces/" />
           <SectionHead name="The Project" />

@@ -22,7 +22,7 @@ const BodyContainer = styled.div`
 function Lhmedia() {
     return (
       <div className="App">
-        <Navigation next="projects-openspace" />
+        <Navigation next="projects-emerald" />
         <BodyContainer>
           <Heading image={lhmedia_lrg} title="LH Media Productions" subTitle="Client Site" techs={["php", "JavaScript", "HTML5", "CSS3", "MySQL"]} description="A portfolio site built for a client who works as a videographer and photogtrapher." live="http://jennamae.ca/lhmedia/" />
           <SectionHead name="The Project" />
