@@ -22,7 +22,7 @@ const BodyContainer = styled.div`
 function Emerald() {
     return (
       <div className="App">
-        <Navigation next="projects-cms" />
+        <Navigation next="projects-openspace" />
         <BodyContainer>
           <Heading image={emerald_lrg} title="Emerald Backyards" subTitle="Web Development" techs={["JavaScript", "HTML5", "CSS3", "PHP"]} description="UX/UI design and frontend development for a landscaping company looking to gain clients." live="http://jennamae.ca/pm2/" />
           <SectionHead name="The Project" />
