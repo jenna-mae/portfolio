@@ -11,6 +11,11 @@ import openspace from './Components/pages/openspace';
 import emerald from './Components/pages/emerald';
 import cms from './Components/pages/cms';
 
+import ReactGA from 'react-ga';
+// import RouteChangeTracker from './Components/Main/RouteChangeTracker'
+
+const TRACKING_ID = "G-199HKKRZ60";
+ReactGA.initialize(TRACKING_ID);
 function App() {
 
   return (
@@ -24,6 +29,13 @@ function App() {
         <Route path="/projects-emerald" exact component={emerald}/>
         <Route path="/projects-cms" exact component={cms}/>
       </Switch>
+      <Route path="/" render={({location}) => {
+        if (typeof window.ga === 'function') {
+          window.ga('set', 'page', location.pathname + location.search);
+          window.ga('send', 'pageview');
+        }
+        return null;
+      }} />
     </Router>
     </div>
   );
