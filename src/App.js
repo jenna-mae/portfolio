@@ -12,10 +12,19 @@ import emerald from './Components/pages/emerald';
 import cms from './Components/pages/cms';
 
 import ReactGA from 'react-ga';
-// import RouteChangeTracker from './Components/Main/RouteChangeTracker'
+import { createBrowserHistory } from 'history';
 
-const TRACKING_ID = "G-199HKKRZ60";
-ReactGA.initialize(TRACKING_ID);
+const trackingId = "G-199HKKRZ60";
+ReactGA.initialize(trackingId);
+
+const history = createBrowserHistory();
+
+// Initialize google analytics page view tracking
+history.listen(location => {
+  ReactGA.set({ page: location.pathname }); // Update the user's current page
+  ReactGA.pageview(location.pathname); // Record a pageview for the given page
+});
+
 function App() {
 
   return (
@@ -29,13 +38,6 @@ function App() {
         <Route path="/projects-emerald" exact component={emerald}/>
         <Route path="/projects-cms" exact component={cms}/>
       </Switch>
-      <Route path="/" render={({location}) => {
-        if (typeof window.ga === 'function') {
-          window.ga('set', 'page', location.pathname + location.search);
-          window.ga('send', 'pageview');
-        }
-        return null;
-      }} />
     </Router>
     </div>
   );
