@@ -11,20 +11,6 @@ import openspace from './Components/pages/openspace';
 import emerald from './Components/pages/emerald';
 import cms from './Components/pages/cms';
 
-import ReactGA from 'react-ga';
-import { createBrowserHistory } from 'history';
-
-const trackingId = "UA-216933057-1";
-ReactGA.initialize(trackingId);
-
-const history = createBrowserHistory();
-
-// Initialize google analytics page view tracking
-history.listen(location => {
-  ReactGA.set({ page: location.pathname }); // Update the user's current page
-  ReactGA.pageview(location.pathname); // Record a pageview for the given page
-});
-
 function App() {
 
   return (
