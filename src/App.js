@@ -14,7 +14,7 @@ import cms from './Components/pages/cms';
 import ReactGA from 'react-ga';
 import { createBrowserHistory } from 'history';
 
-const trackingId = "G-18WSSX4HMY";
+const trackingId = "UA-216933057-1";
 ReactGA.initialize(trackingId);
 
 const history = createBrowserHistory();
